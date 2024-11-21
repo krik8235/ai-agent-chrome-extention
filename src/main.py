@@ -14,7 +14,6 @@ origins = [
     "http://localhost",
     "http://localhost:3000",
 ]
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -53,10 +52,8 @@ async def browse_endpoint(request: BrowsingRequest):
         updated_prompt = RANK_PROMPT_TEMPLATE.format(
             request=request.request,
             listings=listings_text
-        )
-        
+        ) 
         messages = [{"role": "user", "content": updated_prompt}]
-        
         completion = client.chat.completions.create(
             model="meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo",
             messages=messages,
