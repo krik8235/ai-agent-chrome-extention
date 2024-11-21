@@ -5,16 +5,16 @@ export const App = () => {
   const [processing, setProcessing] = useState(false)
   const [error, setError] = useState(false)
   const [res, setRes] = useState(null)
-
   useEffect(() => {
     const asyncFetch = async () => {
       setProcessing(true); setError(false)
       await fetch("https://yappiest-carina-krik8235-ffe52731.koyeb.app/browse", {
         method: "POST",
+        mode: window.location.hostname === "localhost" ? "cors" : "no-core",
         headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': window.location.origin,
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+          // "Access-Control-Allow-Origin": window.location.origin,
         },
         body: JSON.stringify(
           {
