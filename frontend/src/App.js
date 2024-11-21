@@ -10,11 +10,11 @@ export const App = () => {
       setProcessing(true); setError(false)
       await fetch("https://yappiest-carina-krik8235-ffe52731.koyeb.app/browse", {
         method: "POST",
-        mode: window.location.hostname === "localhost" ? "cors" : "no-cors",
+        mode: "cors",
         headers: {
           "Accept": "application/json",
           "Content-Type": "application/json",
-          // "Access-Control-Allow-Origin": window.location.origin,
+          "Access-Control-Allow-Origin": "*",
         },
         body: JSON.stringify(
           {
@@ -34,9 +34,9 @@ export const App = () => {
           if (res?.ok === false) { setProcessing(false); setError(true) }
           else setProcessing(false)
         })
-        .catch(err => { console.log(err); setRes(err); setProcessing(false); setError(true); })
+        .catch(err => { console.log(err); setRes("error"); setProcessing(false); setError(true); })
     }
-    if (!res) {
+    if (res === null) {
       asyncFetch()
     }
   }, [res])

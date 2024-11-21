@@ -14,6 +14,53 @@
 </head>
 
 <body>
+  <div class="container content section">
+    <h1>Test API connection (HTML)</h1>
+    <p id="processing"></p>
+    <p id="error"></p>
+    <p id="success"> </p>
+  </div>
+
+  <script>
+    processing = document.getElementById("processing");
+    error = document.getElementById("error");
+    success = document.getElementById("success");
+
+    processing.appendChild(document.createTextNode("Processing"))
+    fetch("https://yappiest-carina-krik8235-ffe52731.koyeb.app/browse", {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify(
+        {
+          "request": "discount",
+          "listings": [
+            {
+              "name": "Upright Piano",
+              "description": "Beautiful upright piano in great condition",
+              "value": 1000
+            }
+          ]
+        }
+      ),
+    })
+      .then(res => {
+        console.log("res", res);
+        if (res.ok) {
+          processing.appendChild(document.createTextNode(" ✅"));
+          success.appendChild(document.createTextNode("Successfully connected 🤠"))
+        }
+        else error.appendChild(document.createTextNode("Something went wrong."))
+      })
+      .catch(err => {
+        processing.appendChild(document.createTextNode(" ✅"));
+        error.appendChild(document.createTextNode("Something went wrong."))
+      })
+  </script>
   <div id="root"></div>
 </body>
 
