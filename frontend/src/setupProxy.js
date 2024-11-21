@@ -6,7 +6,7 @@ module.exports = function (app) {
     'Content-Type': '*',
   }
   try {
-    app.use(createProxyMiddleware('/', {
+    app.use(createProxyMiddleware('/api', {
       target: 'http://localhost:8000/',
       changeOrigin: true,
       headers,
