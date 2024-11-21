@@ -3,7 +3,7 @@
 A Chrome extension that uses AI agents to help users negotiate the best deals.
 
 
-[Test website](https://rag-agent-system-chrome-extention.vercel.app/)
+[Connection test site](https://rag-agent-system-chrome-extention.vercel.app/)
 
 <!-- ![UI](https://res.cloudinary.com/dfeirxlea/image/upload/v1731425753/portfolio/fsqjubnndrawnp9ezimq.png)
 
@@ -154,12 +154,12 @@ A Chrome extension that uses AI agents to help the user negotiate the best deals
    Now you can access the API endpoint from the public URL `...koyab.app`.
 
 
-4. Run the frontend.  (Open another terminal and set the root to 'frontend')
+4. Run the frontend.  (Open another terminal and set the root to `frontend`. For now, frontend contains test connection to the public API)
    ```
    npm i
    npm start 
    ```
-   The backend will be available at `http://localhost:3000`.
+   The frontend will be available at `http://localhost:3000`.
 
 
 ## Development
