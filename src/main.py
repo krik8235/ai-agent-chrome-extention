@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from pydantic import BaseModel
 from together import Together
 from fastapi import FastAPI, HTTPException
-from ..Prompts.Browse import BROWSING_PROMPT_TEMPLATE
+from Prompts.Browse import BROWSING_PROMPT_TEMPLATE
 load_dotenv(override=True)
 app = FastAPI()
 client = Together(api_key=os.getenv("TOGETHER_API_KEY"))

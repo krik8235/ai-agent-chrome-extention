@@ -4,7 +4,7 @@ import re
 import logging
 from dotenv import load_dotenv
 from together import Together
-from ..Prompts.Negotiate import NEGOTIATION_PROMPT_TEMPLATE
+from Prompts.Negotiate import NEGOTIATION_PROMPT_TEMPLATE
 load_dotenv(override=True)
 client = Together(api_key=os.getenv("TOGETHER_API_KEY"))
 logging.basicConfig(filename='negotiation.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

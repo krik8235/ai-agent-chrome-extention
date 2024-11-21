@@ -3,7 +3,7 @@ name = "backend"
 version = "0.1.0"
 description = ""
 authors = ["Kuriko Iwai"]
-packages = [{include = "src"}, {include = "tests"}]
+packages = [{include = "src"}, {include = "tests"}, {include = "Prompts"}]
 
 
 [tool.poetry.dependencies]
