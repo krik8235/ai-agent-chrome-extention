@@ -22,8 +22,7 @@ app.add_middleware(
     allow_origin_regex='https://*\.vercel\.app',
     allow_credentials=True,
     allow_methods=["POST", "OPTIONS"],
-    allow_headers=["Origin", "Access-Control-Allow-Origin", "*"],
-    expose_headers=["*"]
+    allow_headers=["*"]
 )
 
 
