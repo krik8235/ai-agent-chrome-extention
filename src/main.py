@@ -14,6 +14,7 @@ origins = [
     "http://localhost",
     "http://localhost:3000",
     "http://localhost:8000",
+    "https://rag-agent-system-chrome-extention.vercel.app"
 ]
 app.add_middleware(
     CORSMiddleware,
@@ -22,6 +23,7 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["POST"],
     allow_headers=["Accept", "Content-Type"],
+    expose_headers=[]
 )
 
 

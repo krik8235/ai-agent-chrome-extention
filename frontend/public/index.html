@@ -32,11 +32,10 @@
       mode: "cors",
       headers: {
         "Origin": window.location.origin,
-        "Accept": "application/json",
+        "Accept": "/",
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": window.location.origin,
-        "Access-Control-Allow-Headers": "*",
-        "Access-Control-Allow-Methods": "POST, OPTION, GET",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "POST",
       },
       body: JSON.stringify(
         {
