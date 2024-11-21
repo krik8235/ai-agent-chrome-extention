@@ -76,6 +76,7 @@ A Chrome extension that uses AI agents to help the user negotiate the best deals
    - Pydantic: Data validation library for Python
    - Fast API: Web framework for building APIs based on standard Python type hints
    - Replit: Deploy Fast API on Replit server (See the `.replit` and `replit.nix` for its configuration.)
+   - Koyeb: Deploy the backend repo and access in the production env
 
 
 ## Project Structure
@@ -84,20 +85,22 @@ A Chrome extension that uses AI agents to help the user negotiate the best deals
 .
 frontend
 backend
-├── backend
-│   └── __init__.py
-│   └── api.py = connect with database
-│   └── main.py = build fastAPI connection
-├── Prompts
-│   └── Browse.py
-│   └── Negotiate.py
-│   └── Validate.py
+└── backend
+    └── __init__.py
+    └── api.py = connect with database
+    └── main.py = build fastAPI connection
+└── Prompts
+    └── Browse.py
+    └── Negotiate.py
+    └── Validate.py
 └── tests
-│   └── __init__.py
-│   └── test_endpoint.py: test connection to the browser endpoint
-│   └── test_negotiation.py: test and log the negotiation process and outcome
+    └── __init__.py
+    └── test_endpoint.py: test connection to the browser endpoint
+    └── test_negotiation.py: test and log the negotiation process and outcome
 ├── pyproject.toml
-└── poetry.lock
+├── poetry.lock
+├── Procfile (for koyeb deployment)
+└── runtime.txt (for koyeb deployment)
 ```
 
 ## Setup
@@ -134,9 +137,17 @@ backend
    poetry run client
    ```
    The results will be printed on your terminal.
-   When you update the `main.py`, run this command to see if
+   When you update the `main.py`, run this command to see if the update is working properly.
 
    The backend will be available at `http://localhost:8000`.
+
+3. Deploy the API via Koyab
+   ```
+   koyeb deploy . <your repository name>/backend --instance-type=free
+   ```
+   *See the [doc](https://www.koyeb.com/docs/build-and-deploy/deploy-project-directory) for the Koyeb CLI installation and more.
+
+   Now you can access the API from `koyab.app` URL.
 
 
 
