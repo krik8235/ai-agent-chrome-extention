@@ -1,1 +1,1 @@
-web: uvicorn backend/backend/main:app --port ${PORT:-8000} --host 0.0.0.0 --timeout-keep-alive 75
+web: uvicorn src.main:app --port ${PORT:-8000} --host 0.0.0.0 --timeout-keep-alive 75

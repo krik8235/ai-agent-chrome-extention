@@ -1,5 +1,6 @@
 import os
 import json
+import uvicorn
 from dotenv import load_dotenv
 from pydantic import BaseModel
 from together import Together
@@ -70,5 +71,4 @@ async def browse_endpoint(request: BrowsingRequest):
 
 
 if __name__ == "__main__":
-    import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)

@@ -83,23 +83,24 @@ A Chrome extension that uses AI agents to help the user negotiate the best deals
 
 ```
 .
-frontend
-backend
-└── backend
-    └── __init__.py
-    └── api.py = connect with database
-    └── main.py = build fastAPI connection
+└── frontend
+|
+└── src
+   └── __init__.py
+   └── api.py = connect with database
+   └── main.py = build fastAPI connection
 └── Prompts
-    └── Browse.py
-    └── Negotiate.py
-    └── Validate.py
+   └── Browse.py
+   └── Negotiate.py
+   └── Validate.py
 └── tests
-    └── __init__.py
-    └── test_endpoint.py: test connection to the browser endpoint
-    └── test_negotiation.py: test and log the negotiation process and outcome
+   └── __init__.py
+   └── test_endpoint.py: test connection to the browser endpoint
+   └── test_negotiation.py: test and log the negotiation process and outcome
 ├── pyproject.toml
-├── poetry.lock
-├── Procfile (for koyeb deployment)
+└── poetry.lock
+└── requirements.txt (for koyeb deployment)
+└── Procfile (for koyeb deployment)
 └── runtime.txt (for koyeb deployment)
 ```
 
@@ -143,11 +144,11 @@ backend
 
 3. Deploy the API via Koyab
    ```
-   koyeb deploy . <your repository name>/backend --instance-type=free
+   koyeb deploy . <amazing_app_name_of_your_choice>/backend --instance-type=free
    ```
    *See the [doc](https://www.koyeb.com/docs/build-and-deploy/deploy-project-directory) for the Koyeb CLI installation and more.
 
-   Now you can access the API from `koyab.app` URL.
+   Now you can access the API endpoint from `koyab.app` URL.
 
 
 
