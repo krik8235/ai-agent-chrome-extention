@@ -13,11 +13,14 @@ client = Together(api_key=os.getenv("TOGETHER_API_KEY"))
 origins = [
     "http://localhost",
     "http://localhost:3000",
-    "https://rag-agent-system-chrome-extention.vercel.app"
+    "http://localhost:8000",
+    "https://rag-agent-system-chrome-extention.vercel.app",
+    "https://rag-agent-system-chrome-extention-git-main-rs-projects-84b9b695.vercel.app",
+    "https://rag-agent-system-chrome-extention-1f5bbpmjf.vercel.app"
 ]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

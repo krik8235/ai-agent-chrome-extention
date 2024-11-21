@@ -2,10 +2,10 @@ import { useState, useEffect } from "react"
 
 
 export const App = () => {
-  console.log(window.location)
   const [processing, setProcessing] = useState(false)
   const [error, setError] = useState(false)
   const [res, setRes] = useState(null)
+
   useEffect(() => {
     const asyncFetch = async () => {
       setProcessing(true); setError(false)
@@ -40,6 +40,7 @@ export const App = () => {
       asyncFetch()
     }
   }, [res])
+
 
   return (
     <div className="container content section">
