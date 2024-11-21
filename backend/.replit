@@ -1,0 +1,15 @@
+modules = ["python-3.12"]
+run = ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--reload"]
+hidden = [".pythonlibs"]
+
+[nix]
+channel = "stable-24_05"
+
+[[ports]]
+localPort = 8000
+externalPort = 80
+
+
+[[ports]]
+localPort = 8000
+externalPort = 80
