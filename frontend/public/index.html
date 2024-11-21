@@ -33,7 +33,7 @@
       headers: {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": window.location.origin,
       },
       body: JSON.stringify(
         {
@@ -49,7 +49,6 @@
       ),
     })
       .then(res => {
-        console.log("res", res);
         if (res.ok) {
           processing.appendChild(document.createTextNode(" ✅"));
           success.appendChild(document.createTextNode("Successfully connected 🤠"))
@@ -57,10 +56,11 @@
         else error.appendChild(document.createTextNode("Something went wrong."))
       })
       .catch(err => {
-        processing.appendChild(document.createTextNode(" ✅"));
+        processing.appendChild(document.createTextNode(" 🙅‍♀️"));
         error.appendChild(document.createTextNode("Something went wrong."))
       })
   </script>
+
   <div id="root"></div>
 </body>
 
