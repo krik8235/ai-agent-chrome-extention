@@ -61,7 +61,7 @@ A Chrome extension that uses AI agents to help the user negotiate the best deals
 ## Technologies Used
 [data-doc-management]
 
-   - Upstage: Converts natural language queries into SQL. In this project use Document Parser API to convert contracts to text format [Doc](https://console.upstage.ai/docs/getting-started/overview)
+   - Upstage: Converts natural language queries into SQL [Doc](https://console.upstage.ai/docs/getting-started/overview)
    - Chroma DB: Vector database for storing and querying standard contract clauses
    - SQLite: Database for storing application data
 
@@ -144,11 +144,11 @@ A Chrome extension that uses AI agents to help the user negotiate the best deals
 
 3. Deploy the API via Koyab
    ```
-   koyeb deploy . <amazing_app_name_of_your_choice>/backend --instance-type=free
+   koyeb deploy . <amazing_app_name_of_your_choice>/src --instance-type=free
    ```
    *See the [doc](https://www.koyeb.com/docs/build-and-deploy/deploy-project-directory) for the Koyeb CLI installation and more.
 
-   Now you can access the API endpoint from `koyab.app` URL.
+   Now you can access the API endpoint from the public URL `...koyab.app`.
 
 
 
