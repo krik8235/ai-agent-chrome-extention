@@ -83,7 +83,7 @@ A Chrome extension that uses AI agents to help the user negotiate the best deals
 
 ```
 .
-└── frontend
+└── frontend - react app
 |
 └── src
    └── __init__.py
@@ -99,9 +99,11 @@ A Chrome extension that uses AI agents to help the user negotiate the best deals
    └── test_negotiation.py: test and log the negotiation process and outcome
 ├── pyproject.toml
 └── poetry.lock
-└── requirements.txt (for koyeb deployment)
-└── Procfile (for koyeb deployment)
-└── runtime.txt (for koyeb deployment)
+
+< Koyeb deployment>
+└── requirements.txt
+└── Procfile
+└── runtime.txt
 ```
 
 ## Setup
@@ -151,6 +153,13 @@ A Chrome extension that uses AI agents to help the user negotiate the best deals
 
    Now you can access the API endpoint from the public URL `...koyab.app`.
 
+
+4. Run the frontend.  (Open another terminal and set the root to 'frontend')
+   ```
+   npm i
+   npm start 
+   ```
+   The backend will be available at `http://localhost:3000`.
 
 
 ## Development
