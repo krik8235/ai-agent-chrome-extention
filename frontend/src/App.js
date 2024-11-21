@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 
 
 export const App = () => {
+  console.log(window.location)
   const [processing, setProcessing] = useState(false)
   const [error, setError] = useState(false)
   const [res, setRes] = useState(null)
@@ -13,7 +14,7 @@ export const App = () => {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Origin': window.location.origin,
         },
         body: JSON.stringify(
           {
