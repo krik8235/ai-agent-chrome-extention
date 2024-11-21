@@ -5,3 +5,6 @@ import "./styles.scss"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(<App />)
+
+
+// https://fastapi.tiangolo.com/tutorial/cors/#wildcards

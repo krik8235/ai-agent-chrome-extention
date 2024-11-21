@@ -15,6 +15,8 @@ export const App = () => {
           "Accept": "application/json",
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": window.location.origin,
+          "Access-Control-Allow-Headers": "*",
+          "Access-Control-Allow-Methods": "POST, OPTION, GET",
         },
         body: JSON.stringify(
           {
