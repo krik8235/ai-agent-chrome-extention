@@ -8,7 +8,7 @@ export const App = () => {
   useEffect(() => {
     const asyncFetch = async () => {
       setProcessing(true); setError(false)
-      await fetch("https://yappiest-carina-krik8235-ffe52731.koyeb.app/browse", {
+      await fetch("https://api-ai-chrome.koyeb.app/browse", {
         method: "POST",
         mode: "cors",
         headers: {
