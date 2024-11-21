@@ -5,5 +5,3 @@ api.json
 .replit_server/
 .DS_Store/
 dist/
-
-frontend/
