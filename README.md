@@ -122,6 +122,7 @@ A Chrome extension that uses AI agents to help the user negotiate the best deals
    ```
    TOGETHER_API_KEY=your_together_api_key
    DATABASE_URL=your_database_url
+   API_ROUTE=your_public_api_route
    ```
 
 ## Usage

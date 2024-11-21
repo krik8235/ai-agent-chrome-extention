@@ -3,7 +3,7 @@ import os
 
 def test_browse_endpoint():
     dev_mode = os.environ.get("DEV_MODE", "production")
-    url = "http://127.0.0.1:8000/browse" if dev_mode == "dev" else "https://yappiest-carina-krik8235-ffe52731.koyeb.app/browse"
+    url = "http://127.0.0.1:8000/browse" if dev_mode == "dev" else f"{os.environ.get("API_ROUTE")}/browse"
     data = {
         "request": "I'm looking for a used piano in good condition",
         "listings": [
