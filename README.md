@@ -3,9 +3,9 @@
 A Chrome extension that uses AI agents to help users negotiate the best deals.
 
 
-<!-- [Website](https://contract-neg-system.streamlit.app/)
+[Test website](https://rag-agent-system-chrome-extention.vercel.app/)
 
-![UI](https://res.cloudinary.com/dfeirxlea/image/upload/v1731425753/portfolio/fsqjubnndrawnp9ezimq.png)
+<!-- ![UI](https://res.cloudinary.com/dfeirxlea/image/upload/v1731425753/portfolio/fsqjubnndrawnp9ezimq.png)
 
 ![Terminal](https://res.cloudinary.com/dfeirxlea/image/upload/v1731425419/portfolio/mytqa9jtu8yexf6oc0k8.png) -->
 
