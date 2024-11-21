@@ -31,10 +31,10 @@
       method: "POST",
       mode: "cors",
       headers: {
-        "Origin": "https://rag-agent-system-chrome-extention.vercel.app",
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Headers": "*",
-        "Access-Control-Allow-Methods": "POST, OPTIONS, GET",
+        "Origin": window.location.origin,
+        "Access-Control-Request-Method": "POST",
+        "Access-Control-Request-Headers": "*",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(
         {

@@ -12,11 +12,10 @@ export const App = () => {
         method: "POST",
         mode: "cors",
         headers: {
-          "Accept": "application/json",
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": window.location.origin,
-          "Access-Control-Allow-Headers": "*",
-          "Access-Control-Allow-Methods": "POST, OPTION, GET",
+          "Origin": window.location.origin,
+          "Access-Control-Request-Method": "POST",
+          "Access-Control-Request-Headers": "*",
+          "Content-Type": "application/json"
         },
         body: JSON.stringify(
           {
