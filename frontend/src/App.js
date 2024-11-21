@@ -10,7 +10,7 @@ export const App = () => {
       setProcessing(true); setError(false)
       await fetch("https://yappiest-carina-krik8235-ffe52731.koyeb.app/browse", {
         method: "POST",
-        mode: window.location.hostname === "localhost" ? "cors" : "no-core",
+        mode: window.location.hostname === "localhost" ? "cors" : "no-cors",
         headers: {
           "Accept": "application/json",
           "Content-Type": "application/json",
