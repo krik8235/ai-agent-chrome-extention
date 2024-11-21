@@ -6,9 +6,9 @@ export const App = () => {
   const [error, setError] = useState(false)
   const [res, setRes] = useState(null)
   useEffect(() => {
-    if (!res) {
+    const asyncFetch = async () => {
       setProcessing(true); setError(false)
-      fetch("https://yappiest-carina-krik8235-ffe52731.koyeb.app/browse", {
+      await fetch("https://yappiest-carina-krik8235-ffe52731.koyeb.app/browse", {
         method: "POST",
         headers: {
           'Accept': 'application/json',
@@ -29,12 +29,14 @@ export const App = () => {
         ),
       })
         .then(res => {
-          console.log(res, res)
           setRes(res)
           if (res?.ok === false) { setProcessing(false); setError(true) }
           else setProcessing(false)
         })
         .catch(err => { console.log(err); setRes(err); setProcessing(false); setError(true); })
+    }
+    if (!res) {
+      asyncFetch()
     }
   }, [res])
 
