@@ -1,5 +1,5 @@
 modules = ["python-3.12"]
-run = ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--reload"]
+run = ["uvicorn", "main:app", "--host", "0.0.0.0", "--reload"]
 hidden = [".pythonlibs"]
 
 [nix]
